@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkmate
+  namespace: checkmate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checkmate
+  template:
+    metadata:
+      labels:
+        app: checkmate
+    spec:
+      containers:
+        - name: checkmate
+          image: yny.ocir.io/ax1nm9kw34v6/checkmate:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: checkmate-secret
+      imagePullSecrets:
+        - name: ocir-secret
