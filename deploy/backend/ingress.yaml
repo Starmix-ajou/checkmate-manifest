@@ -9,6 +9,10 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - api.checkmate.it.kr
+    secretName: checkmate-tls
   rules:
   - host: api.checkmate.it.kr
     http:
