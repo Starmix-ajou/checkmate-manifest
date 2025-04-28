@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: checkmate-ingress
-  namespace: checkmate
+  name: checkmate-backend-ingress
+  namespace: checkmate-backend
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -10,17 +10,17 @@ metadata:
 spec:
   ingressClassName: nginx
   tls:
-  - hosts:
-    - api.checkmate.it.kr
-    secretName: checkmate-tls
+    - hosts:
+        - api.checkmate.it.kr
+      secretName: checkmate-tls
   rules:
-  - host: api.checkmate.it.kr
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: checkmate-svc
-            port:
-              number: 80
+    - host: api.checkmate.it.kr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: checkmate-backend-svc
+                port:
+                  number: 80
