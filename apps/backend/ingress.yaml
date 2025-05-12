@@ -7,6 +7,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/keep-alive: "3600"
+    nginx.ingress.kubernetes.io/connection-proxy-header: "keep-alive"
 spec:
   ingressClassName: nginx
   tls:
