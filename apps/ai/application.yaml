@@ -4,7 +4,7 @@ metadata:
   name: checkmate-ai
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.slack: "info-deploy"
+    notifications.argoproj.io/subscribe.slack: "#info-deploy"
 spec:
   project: default
   source:
