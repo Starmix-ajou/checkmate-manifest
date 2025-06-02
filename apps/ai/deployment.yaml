@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: checkmate-ai
-          image: yny.ocir.io/ax1nm9kw34v6/checkmate-ai:68ee4c3dfbf9e0e3de49155543c8687d209299e5
+          image: yny.ocir.io/ax1nm9kw34v6/checkmate-ai:87a3a9461226dd550e98e35baa44ae1f04d60289
           ports:
             - containerPort: 8000
           envFrom:
