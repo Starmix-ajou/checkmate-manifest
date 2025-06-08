@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.slack: "#info-deploy"
+    argocd.argoproj.io/webhook: github
+    argocd.argoproj.io/webhook.github.secret: ${WEBHOOK_SECRET}
 spec:
   project: default
   source:
