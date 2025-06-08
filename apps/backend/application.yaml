@@ -6,7 +6,7 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.slack: "#info-deploy"
     argocd.argoproj.io/webhook: github
-    argocd.argoproj.io/webhook.github.secret: ${WEBHOOK_SECRET}
+    argocd.argoproj.io/webhook.github.secret: d2ViaG9va3NlY3JldGZvcmNoZWNrbWF0ZWFyZ29jZA==
 spec:
   project: default
   source:
