@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: checkmate-backend
-          image: yny.ocir.io/ax1nm9kw34v6/checkmate:fbffaf87a5547b5f07e9026cc80ca45e7aa62ba0
+          image: yny.ocir.io/ax1nm9kw34v6/checkmate:3d38f712e62e2c2fcebcd1f77104b2115306b1d4
           ports:
             - containerPort: 8080
           envFrom:
